@@ -9,10 +9,11 @@ const port = 5000;
 app.use(express.json());
 
 //cors
-app.use(cors({
-    origin: ["http://localhost:5000"] ,
-})
-);
+// app.use(cors({
+//     origin: ["http://localhost:5000"] ,
+// })
+
+app.use(cors({ origin: "https://evangadi-forum33.netlify.app" }));
 
 let authMiddleware = require("./middleware/authMiddleware");
 //user routes middleware file
